@@ -1,0 +1,2 @@
+attempt_id,athlete_name,bib_number,camera_id,frame_index,timestamp_iso,clicked_point_px,snapped_point_px,world_point_cm,distance_cm,calibration_file,original_frame_file,annotated_frame_file
+20260514T142358Z_Maria_165,Maria,165,0,882,2026-05-14T14:27:30.325248+00:00,"(708, 310)","(352, 315)","(26.915541003304924, 45.01165825643976)",322.65,output\calibrations\cam_0.json,output\measurements\20260514T142358Z_Maria_165\frame_original.png,output\measurements\20260514T142358Z_Maria_165\frame_annotated.png

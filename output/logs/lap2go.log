@@ -1,0 +1,193 @@
+2026-05-14 15:23:39,663 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log
+2026-05-14 15:23:44,936 | INFO | lap2go | Câmaras prontas: [0]
+2026-05-14 15:23:58,295 | INFO | lap2go | Nova tentativa criada em output\measurements\20260514T142358Z_Maria_165
+2026-05-14 15:24:33,359 | INFO | lap2go | Calibração guardada em output\calibrations\cam_0.json | erro médio=0.000 px | erro máximo=0.000 px
+2026-05-14 15:24:33,359 | INFO | lap2go | Sandbox=cam_0 | pontos=4
+2026-05-14 15:25:10,693 | INFO | lap2go | Gravação iniciada | duração=30.00s | pre_buffer=1.50s
+2026-05-14 15:25:46,022 | INFO | lap2go | Vídeos exportados: {0: WindowsPath('output/measurements/20260514T142358Z_Maria_165/video/camera_0.mp4')}
+2026-05-14 15:27:14,593 | INFO | lap2go | Frame selecionado | cam=0 | index=882 | ts=1778768739.018
+2026-05-14 15:27:30,330 | INFO | lap2go | Medição final: 322.65 cm
+2026-05-14 15:27:30,334 | INFO | lap2go | measurement.json: output\measurements\20260514T142358Z_Maria_165\measurement.json
+2026-05-14 15:27:30,334 | INFO | lap2go | measurements.csv: output\measurements\measurements.csv
+2026-05-14 15:27:48,769 | ERROR | lap2go | Erro durante a tentativa: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\highgui\src\window_w32.cpp:1261: error: (-27:Null pointer) NULL window: 'LAP2GO - Resultado' in function 'cvDestroyWindow'
+Traceback (most recent call last):
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 417, in main
+    run_attempt(
+    ~~~~~~~~~~~^
+        camera_manager=camera_manager,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        file_manager=file_manager,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        calibration_manager=calibration_manager,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 393, in run_attempt
+    cv2.destroyWindow("LAP2GO - Resultado")
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+cv2.error: OpenCV(4.13.0) D:\a\opencv-python\opencv-python\opencv\modules\highgui\src\window_w32.cpp:1261: error: (-27:Null pointer) NULL window: 'LAP2GO - Resultado' in function 'cvDestroyWindow'
+
+2026-05-14 15:27:54,916 | INFO | lap2go | Aplicação terminada.
+2026-05-18 16:56:03,272 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-18 16:56:38,444 | ERROR | lap2go | Erro fatal: Timeout ao abrir câmara 0 (cam_principal)
+Traceback (most recent call last):
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 698, in main
+    camera_manager.start_all()
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\camera_manager.py", line 341, in start_all
+    stream.start()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\camera_manager.py", line 143, in start
+    self.open()
+    ~~~~~~~~~^^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\camera_manager.py", line 108, in open
+    raise CameraOpenError(
+        f"Timeout ao abrir câmara {self.config.camera_id} ({self.config.name})"
+    )
+camera_manager.CameraOpenError: Timeout ao abrir câmara 0 (cam_principal)
+2026-05-18 16:56:38,452 | INFO | lap2go | Aplicação terminada.
+2026-05-21 09:12:57,914 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:13:35,498 | ERROR | lap2go | Erro fatal: Número insuficiente de câmaras prontas. health={0: 'recovering', 1: 'recovering'}
+Traceback (most recent call last):
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 704, in main
+    raise AppError(
+        f"Número insuficiente de câmaras prontas. health={camera_manager.health_summary()}"
+    )
+AppError: Número insuficiente de câmaras prontas. health={0: 'recovering', 1: 'recovering'}
+2026-05-21 09:13:40,309 | INFO | lap2go | Aplicação terminada.
+2026-05-21 09:25:27,059 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:25:32,719 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 09:25:32,720 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 09:25:44,740 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T082544Z_Nuno_351
+2026-05-21 09:28:15,733 | INFO | lap2go | Calibração guardada em output\calibrations\cam_0.json | erro médio=0.000 px | erro máximo=0.000 px
+2026-05-21 09:31:03,552 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:31:31,519 | ERROR | lap2go | Erro fatal: Número insuficiente de câmaras prontas. health={0: 'recovering', 1: 'recovering'}
+Traceback (most recent call last):
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 704, in main
+    raise AppError(
+        f"Número insuficiente de câmaras prontas. health={camera_manager.health_summary()}"
+    )
+AppError: Número insuficiente de câmaras prontas. health={0: 'recovering', 1: 'recovering'}
+2026-05-21 09:31:37,550 | INFO | lap2go | Aplicação terminada.
+2026-05-21 09:31:54,251 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:31:58,715 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 09:31:58,716 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 09:32:06,788 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T083206Z_Nuno_351
+2026-05-21 09:32:16,117 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 09:36:10,861 | INFO | lap2go | Aplicação interrompida pelo utilizador.
+2026-05-21 09:36:14,065 | INFO | lap2go | Aplicação terminada.
+2026-05-21 09:36:27,296 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:36:56,103 | ERROR | lap2go | Erro fatal: Número insuficiente de câmaras prontas. health={0: 'recovering', 1: 'recovering'}
+Traceback (most recent call last):
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 704, in main
+    raise AppError(
+        f"Número insuficiente de câmaras prontas. health={camera_manager.health_summary()}"
+    )
+AppError: Número insuficiente de câmaras prontas. health={0: 'recovering', 1: 'recovering'}
+2026-05-21 09:37:01,276 | INFO | lap2go | Aplicação terminada.
+2026-05-21 09:38:32,170 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:38:40,718 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 09:38:40,720 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 09:39:00,677 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T083900Z_nuno_351
+2026-05-21 09:39:07,421 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 09:41:37,055 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:41:46,701 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 09:41:46,701 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 09:41:52,775 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T084152Z_Nuno_351
+2026-05-21 09:41:59,009 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 09:50:12,181 | INFO | lap2go | Aplicação interrompida pelo utilizador.
+2026-05-21 09:50:15,372 | INFO | lap2go | Aplicação terminada.
+2026-05-21 09:50:21,464 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 09:50:30,705 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 09:50:30,705 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 09:51:32,806 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T085132Z_nuno_351
+2026-05-21 09:51:40,988 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 10:05:52,240 | INFO | lap2go | Aplicação interrompida pelo utilizador.
+2026-05-21 10:05:54,832 | INFO | lap2go | Aplicação terminada.
+2026-05-21 10:05:58,388 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 10:06:08,737 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 10:06:08,738 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 10:07:02,987 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T090702Z_nuno_351
+2026-05-21 10:07:09,018 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 10:07:10,681 | ERROR | lap2go | Erro durante a tentativa: 'tuple' object has no attribute 'frame'
+Traceback (most recent call last):
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 606, in run_mode
+    run_attempt(
+    ~~~~~~~~~~~^
+        config=config,
+        ^^^^^^^^^^^^^^
+    ...<2 lines>...
+        calibration_manager=calibration_manager,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 388, in run_attempt
+    preview_live(camera_manager, seconds=2.0)
+    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 164, in preview_live
+    frame0 = packets[0].frame
+             ^^^^^^^^^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'frame'
+2026-05-21 10:08:52,901 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T090852Z_nuno_351
+2026-05-21 10:08:58,965 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 10:09:00,524 | ERROR | lap2go | Erro durante a tentativa: 'tuple' object has no attribute 'frame'
+Traceback (most recent call last):
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 606, in run_mode
+        },
+    
+    ...<4 lines>...
+        manifest_payload,
+        ^^^^^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 388, in run_attempt
+    write_timestamp_overlay=config.recording.write_timestamp_overlay,
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\22nun\Desktop\LAP2GO\salto\main.py", line 164, in preview_live
+AttributeError: 'tuple' object has no attribute 'frame'
+2026-05-21 10:09:03,575 | INFO | lap2go | Aplicação interrompida pelo utilizador.
+2026-05-21 10:09:07,504 | INFO | lap2go | Aplicação terminada.
+2026-05-21 10:09:09,485 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 10:09:18,748 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 10:09:18,748 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 10:09:29,564 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T090929Z_nuno_351
+2026-05-21 10:09:38,644 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 10:21:22,173 | INFO | lap2go | Aplicação interrompida pelo utilizador.
+2026-05-21 10:21:24,968 | INFO | lap2go | Aplicação terminada.
+2026-05-21 10:21:33,181 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-21 10:21:42,745 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-21 10:21:42,746 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-21 10:22:15,716 | INFO | lap2go | Nova tentativa criada em output\measurements\20260521T092215Z_nuno_351
+2026-05-21 10:22:24,064 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-21 11:06:27,132 | INFO | lap2go | Aplicação interrompida pelo utilizador.
+2026-05-21 11:06:30,331 | INFO | lap2go | Aplicação terminada.
+2026-05-26 15:53:27,953 | INFO | lap2go | Aplicação iniciada | log=output\logs\lap2go.log | mode=run
+2026-05-26 15:53:40,124 | INFO | lap2go | Câmaras prontas: [0, 1]
+2026-05-26 15:53:40,125 | INFO | lap2go | Health inicial: {0: 'recovering', 1: 'healthy'}
+2026-05-26 15:53:59,102 | INFO | lap2go | Nova tentativa criada em output\measurements\20260526T145359Z_Nuno_351
+2026-05-26 15:54:09,453 | INFO | lap2go | Calibração carregada de output\calibrations\cam_0.json
+2026-05-26 16:04:35 | INFO | logging_config | Logging inicializado em output\logs\lap2go.log
+2026-05-26 16:04:35 | INFO | __main__ | Aplicação a arrancar com config=config.json
+2026-05-26 16:04:35 | INFO | __main__ | Ficheiro de log ativo: output\logs\lap2go.log
+2026-05-26 16:04:35 | INFO | ui.qt_main_window | UI Qt iniciada.
+2026-05-26 16:04:35 | INFO | ui.qt_main_window | Câmaras configuradas: [0, 1]
+2026-05-26 16:04:35 | INFO | ui.qt_main_window | BD inicializada: output\lap2go.db
+2026-05-26 16:04:35 | INFO | ui.qt_main_window | Sem sessão anterior para restaurar.
+2026-05-26 16:04:35 | INFO | ui.qt_main_window | MainWindow inicializada com sucesso na versão v8.1.5
+2026-05-26 16:04:53 | WARNING | ui.qt_main_window | Atletas: Ainda não existem atletas registados na BD.
+2026-05-26 16:04:55 | WARNING | ui.qt_main_window | Calibração: Inicialize primeiro as câmaras.
+2026-05-26 16:47:55 | INFO | logging_config | Logging inicializado em output\logs\lap2go.log
+2026-05-26 16:47:55 | INFO | __main__ | Aplicação a arrancar com config=config.json
+2026-05-26 16:47:55 | INFO | __main__ | Ficheiro de log ativo: output\logs\lap2go.log
+2026-05-26 16:47:55 | INFO | ui.qt_main_window | UI Qt iniciada.
+2026-05-26 16:47:55 | INFO | ui.qt_main_window | Câmaras configuradas: [0, 1]
+2026-05-26 16:47:55 | INFO | ui.qt_main_window | BD inicializada: output\lap2go.db
+2026-05-26 16:47:55 | INFO | ui.qt_main_window | Sem sessão anterior para restaurar.
+2026-05-26 16:47:55 | INFO | ui.qt_main_window | MainWindow inicializada com sucesso na versão v8.1.5
+2026-05-26 16:57:41 | INFO | logging_config | Logging inicializado em output\logs\lap2go.log
+2026-05-26 16:57:41 | INFO | __main__ | Aplicação a arrancar com config=config.json
+2026-05-26 16:57:41 | INFO | __main__ | Ficheiro de log ativo: output\logs\lap2go.log
+2026-05-26 16:57:41 | INFO | ui.qt_main_window | UI Qt iniciada.
+2026-05-26 16:57:41 | INFO | ui.qt_main_window | Câmaras configuradas: [0]
+2026-05-26 16:57:41 | INFO | ui.qt_main_window | BD inicializada: output\lap2go.db
+2026-05-26 16:57:41 | INFO | ui.qt_main_window | Sem sessão anterior para restaurar.
+2026-05-26 16:57:41 | INFO | ui.qt_main_window | MainWindow inicializada com sucesso na versão v8.1.5
+2026-05-26 17:01:14 | INFO | ui.qt_main_window | Aplicação a fechar

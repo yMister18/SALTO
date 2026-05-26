@@ -1,0 +1,56 @@
+{
+  "attempt_dir": "output\\measurements\\20260514T142358Z_Maria_165",
+  "athlete_name": "Maria",
+  "bib_number": "165",
+  "analysis_camera_id": 0,
+  "frame_index": 882,
+  "frame_timestamp": 1778768739.0184538,
+  "clicked_point_px": [
+    708,
+    310
+  ],
+  "final_point_px": [
+    352,
+    315
+  ],
+  "world_point_cm": [
+    26.915541003304924,
+    45.01165825643976
+  ],
+  "distance_cm": 322.65,
+  "projection_on_call_line_cm": [
+    321.7549377198046,
+    176.05139013043961
+  ],
+  "snap_debug": {
+    "roi_bounds_xyxy": [
+      352,
+      315,
+      352,
+      315
+    ],
+    "candidate_count": 1,
+    "best_score": 0.0,
+    "edge_pixels": 0,
+    "threshold_pixels": 0,
+    "gradient_max": 0.0
+  },
+  "calibration": {
+    "file": "output\\calibrations\\cam_0.json",
+    "sandbox_name": "cam_0",
+    "quality": {
+      "point_count": 4,
+      "mean_reprojection_error_px": 3.0367625750007194e-13,
+      "max_reprojection_error_px": 4.687428401686771e-13,
+      "passed": true,
+      "warning": false
+    }
+  },
+  "videos": {
+    "0": "output\\measurements\\20260514T142358Z_Maria_165\\video\\camera_0.mp4"
+  },
+  "files": {
+    "original_frame": "output\\measurements\\20260514T142358Z_Maria_165\\frame_original.png",
+    "annotated_frame": "output\\measurements\\20260514T142358Z_Maria_165\\frame_annotated.png"
+  }
+}

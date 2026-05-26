@@ -1,0 +1,80 @@
+{
+  "paths": {
+    "base_dir": "output",
+    "calibrations_dir": "output/calibrations",
+    "measurements_dir": "output/measurements",
+    "logs_dir": "output/logs"
+  },
+  "recording": {
+    "duration_seconds_default": 5.0,
+    "pre_buffer_seconds_default": 1.5,
+    "sync_tolerance_ms": 25.0,
+    "min_required_cameras": 1,
+    "poll_interval_seconds": 0.0083333333,
+    "session_fps": 30,
+    "video_codec": "mp4v",
+    "file_extension": ".mp4",
+    "write_timestamp_overlay": false
+  },
+  "analysis": {
+    "default_analysis_camera_id": 0,
+    "default_calibration_name": "cam_0",
+    "default_call_line_world_cm": [
+      [0.0, 0.0],
+      [400.0, 0.0]
+    ],
+    "distance_precision_decimals": 2
+  },
+  "calibration": {
+    "min_points": 4,
+    "max_points": 32,
+    "reprojection_error_warning_px": 2.5,
+    "reprojection_error_fail_px": 8.0,
+    "default_preset_name": "default_rect_400x900",
+    "presets": [
+      {
+        "name": "default_rect_400x900",
+        "world_points_cm": [
+          [0.0, 0.0],
+          [400.0, 0.0],
+          [400.0, 900.0],
+          [0.0, 900.0]
+        ]
+      }
+    ]
+  },
+  "cameras": [
+    {
+      "camera_id": 0,
+      "name": "cam_principal",
+      "source_type": "rtsp",
+      "source": "rtsp://admin:123qwe123@@10.19.150.1:554/h264Preview_01_main",
+      "enabled": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "buffer_seconds": 8,
+      "fourcc": "H264",
+      "warmup_seconds": 3.0,
+      "open_timeout_seconds": 15.0,
+      "read_retry_sleep_seconds": 0.01,
+      "drop_frames_if_behind": true
+    },
+    {
+      "camera_id": 1,
+      "name": "cam_secondary",
+      "source_type": "rtsp",
+      "source": "rtsp://admin:123qwe123@@10.19.150.2:554/h264Preview_01_main",
+      "enabled": true,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "buffer_seconds": 8,
+      "fourcc": "H264",
+      "warmup_seconds": 3.0,
+      "open_timeout_seconds": 15.0,
+      "read_retry_sleep_seconds": 0.01,
+      "drop_frames_if_behind": true
+    }
+  ]
+}
