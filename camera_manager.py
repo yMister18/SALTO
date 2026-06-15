@@ -66,7 +66,6 @@ class CameraOpenError(RuntimeError):
 class CameraReadError(RuntimeError):
     pass
 
-
 class CameraStream:
     def __init__(self, config: CameraSourceConfig):
         self.config = config
@@ -88,6 +87,7 @@ class CameraStream:
         self._last_frame_signature: Optional[float] = None
         self._stream_state: str = "idle"
         self._last_successful_frame_ts: float | None = None
+        self._buffer: Deque[FramePacket] = deque(maxlen=max(1, config.buffer_seconds * config.fps))
 
     @property
     def is_running(self) -> bool:
@@ -322,7 +322,10 @@ class CameraStream:
                 stream_state=self._stream_state,
                 health_status=self.get_health_status(),
             )
-
+class AppContext:
+    def __init__(self, config):
+        self.config = config
+        self.camera_manager = CameraManager(config["cameras"])
 
 class CameraManager:
     def __init__(self, camera_configs: List[CameraSourceConfig]):
@@ -420,3 +423,22 @@ class CameraManager:
                 return True
             time.sleep(0.05)
         return False
+    def get_preview_frame(self, camera_id=None):
+        """
+        Retorna o frame BGR mais recente.
+        Se camera_id for None, devolve o da primeira câmara disponível.
+        """
+        latest = self.latest_packets()
+        if camera_id is not None and camera_id in latest:
+            frame = latest[camera_id][2]
+            if frame is not None and frame.size > 0:
+                return frame
+            return None
+        # Primeira câmara disponível
+        for frame_packet in latest.values():
+            frame = frame_packet[2]
+            if frame is not None and frame.size > 0:
+                return frame
+        return None
+
+        

@@ -65,7 +65,7 @@
       "name": "cam_secondary",
       "source_type": "rtsp",
       "source": "rtsp://admin:123qwe123@@10.19.150.2:554/h264Preview_01_main",
-      "enabled": false,                        
+      "enabled": true,                        
       "width": 1920,
       "height": 1080,
       "fps": 30,
